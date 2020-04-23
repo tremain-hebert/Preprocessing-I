@@ -3,7 +3,14 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+@theme-color: goldenrod;
+.subhead-font{
+	font-size: 3.6rem;
+}
+.list{
+	background-color: peru;
+	font-size: 1.6rem;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -56,16 +63,111 @@ table {
 html, body {
     height: 100%;
 }
+html{
+	font-size: 16px;
+}
+#container{
+	position: relative;
+	min-height: 100vh;
+}
 /*Nav*/
 nav{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	margin: 5vh;
 	a{
-		color: black;
+		color: white;
 		text-decoration: none;
 		padding: 20px;
+		background-color: @theme-color;
+		border: 2px solid;
+		border-color: white;
+	}
+	@media(max-width: 500px){
+		display: flex;
+		flex-direction: column;
+		margin: 3vh;
 	}
 }
 
 /*Intro*/
+section.intro{
+	display: flex;
+	p{
+		line-height: 10vh;
+		font-size: 2.0rem;
+		background-color: @theme-color;
+	}
+	.intro-pic{
+		h1{
+			font-size: 3.0rem;
+			background-color: peru;
+		}
+	}
+	@media(max-width: 500px){
+		display: flex;
+		flex-direction: column;
+		img{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 90%;
+		}
+	}
+}
+/*Skills*/
+section.skills-work{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	#skills{
+		border-right: 1.5px solid;
+		flex-direction: column;
+		h2{
+			border-bottom: 3px solid;
+			text-align: center;
+			width: 50vw;
+			background-color: @theme-color;
+			.subhead-font()
+		}
+		li{
+			border-bottom: 1px solid;
+			text-align: center;
+			.list()
+		}
+	}
+	#work{
+		flex-direction: column;
+		border-left: 1.5px solid;
+		h2{
+			border-bottom: 3px solid;
+			width: 50vw;
+			background-color: @theme-color;
+			.subhead-font()
+		}
+		p{
+			border-bottom: 1px solid;
+			.list()
+		}
+	}
+	@media(max-width: 500px){
+		border-top: 3px solid;
+		padding-bottom: 20vh;
+	}
+}
+/*Footer*/
+footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: grey;
+	h3{
+		font-size: 2.4rem;
+		text-align: center;
+	}
+	p{
+		font-size: 1.8rem;
+		text-align: center;
+	}
+}

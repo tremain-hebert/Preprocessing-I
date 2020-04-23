@@ -2,6 +2,13 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+.subhead-font {
+  font-size: 3.6rem;
+}
+.list {
+  background-color: peru;
+  font-size: 1.6rem;
+}
 html,
 body,
 div,
@@ -134,15 +141,116 @@ html,
 body {
   height: 100%;
 }
+html {
+  font-size: 16px;
+}
+#container {
+  position: relative;
+  min-height: 100vh;
+}
 /*Nav*/
 nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 5vh;
 }
 nav a {
-  color: black;
+  color: white;
   text-decoration: none;
   padding: 20px;
+  background-color: goldenrod;
+  border: 2px solid;
+  border-color: white;
+}
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    margin: 3vh;
+  }
 }
 /*Intro*/
+section.intro {
+  display: flex;
+}
+section.intro p {
+  line-height: 10vh;
+  font-size: 2rem;
+  background-color: goldenrod;
+}
+section.intro .intro-pic h1 {
+  font-size: 3rem;
+  background-color: peru;
+}
+@media (max-width: 500px) {
+  section.intro {
+    display: flex;
+    flex-direction: column;
+  }
+  section.intro img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+}
+/*Skills*/
+section.skills-work {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+section.skills-work #skills {
+  border-right: 1.5px solid;
+  flex-direction: column;
+}
+section.skills-work #skills h2 {
+  border-bottom: 3px solid;
+  text-align: center;
+  width: 50vw;
+  background-color: goldenrod;
+  font-size: 3.6rem;
+}
+section.skills-work #skills li {
+  border-bottom: 1px solid;
+  text-align: center;
+  background-color: peru;
+  font-size: 1.6rem;
+}
+section.skills-work #work {
+  flex-direction: column;
+  border-left: 1.5px solid;
+}
+section.skills-work #work h2 {
+  border-bottom: 3px solid;
+  width: 50vw;
+  background-color: goldenrod;
+  font-size: 3.6rem;
+}
+section.skills-work #work p {
+  border-bottom: 1px solid;
+  background-color: peru;
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  section.skills-work {
+    border-top: 3px solid;
+    padding-bottom: 20vh;
+  }
+}
+/*Footer*/
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+}
+footer h3 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+footer p {
+  font-size: 1.8rem;
+  text-align: center;
+}
